@@ -2,71 +2,464 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Info Hépatite B</title>
-  <!-- Font Awesome pour l'icône WhatsApp -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hepatomètre - Traitement Naturel de l'Hépatite B</title>
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <style>
-    body {
+    :root {
+      --primary-color: #007B5E;
+      --secondary-color: #25D366;
+      --accent-color: #FF6B6B;
+      --light-color: #f8f9fa;
+      --dark-color: #343a40;
+    }
+    
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
       color: #333;
+      line-height: 1.6;
     }
+    
     header {
-      background-color: #007B5E;
+      background: linear-gradient(135deg, var(--primary-color), #005f47);
       color: white;
-      padding: 1rem;
+      padding: 1.5rem 0;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
     }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+      background-size: cover;
+      opacity: 0.1;
+    }
+    
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      animation: fadeInDown 1s ease;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background-color: #f1f1f1;
-      padding: 10px;
-    }
-    nav button {
-      background-color: #007B5E;
-      color: white;
-      border: none;
-      margin: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    nav button:hover {
-      background-color: #005f47;
-    }
-    section {
-      display: none;
-      padding: 2rem;
-    }
-    .active {
-      display: block;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 24px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      text-decoration: none;
+      background-color: var(--light-color);
+      padding: 0.8rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
       z-index: 1000;
     }
+    
+    nav button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      margin: 0.3rem;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav button:hover {
+      background-color: #005f47;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    section {
+      display: none;
+      padding: 2.5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .active {
+      display: block;
+      animation: fadeIn 0.8s ease;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--secondary-color);
+    }
+    
+    h3 {
+      color: var(--primary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.5rem;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+    }
+    
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    strong {
+      color: var(--primary-color);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    img:hover {
+      transform: scale(1.02);
+    }
+    
+    .highlight-box {
+      background-color: rgba(0, 123, 94, 0.1);
+      border-left: 4px solid var(--primary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--secondary-color);
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
     .whatsapp-float:hover {
       background-color: #1ebd58;
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
     }
+    
+    .testimonial-slider, .review-slider {
+      margin: 2rem 0;
+    }
+    
+    .testimonial, .review {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 0 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .testimonial img, .review img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      display: block;
+      border: 3px solid var(--primary-color);
+    }
+    
+    .testimonial h4, .review h4 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .testimonial p, .review p {
+      font-style: italic;
+      color: #555;
+      text-align: center;
+    }
+    
+    .review .stars {
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .review .date {
+      font-size: 0.8rem;
+      color: #777;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(0, 123, 94, 0.2);
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #005f47;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-highlight {
+      background: linear-gradient(135deg, rgba(0, 123, 94, 0.1), rgba(37, 211, 102, 0.1));
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      text-align: center;
+      border: 1px dashed var(--primary-color);
+    }
+    
+    .product-highlight h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .product-highlight .price {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+    
+    .cta-button {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+    }
+    
+    .cta-button:hover {
+      background-color: #ff5252;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+    }
+    
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .social-icons {
+      margin: 1rem 0;
+    }
+    
+    .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      nav button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+      }
+      
+      section {
+        padding: 1.5rem 1rem;
+      }
+      
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+      .hero-slider {
+      margin: 2rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero-slider img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-slider img:hover {
+      transform: scale(1.02);
+    }
+    
+    
+    
+    
+    @media (max-width: 768px) {
+      .hero-slider img {
+        height: 250px;
+      }
+.image-slider {
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.symptoms-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .slide-image img {
+        height: 300px;
+    }
+}
+    
+    
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Hépatite B – Est ce qu'on peut s'en débarrasser définitivement ?</h1>
+  <header class="animate__animated animate__fadeIn">
+    <h1>Hepatomètre - Traitement Naturel de l'Hépatite B</h1>
+    <p>Découvrez la solution naturelle efficace pour éliminer définitivement l'hépatite B</p>
   </header>
 
   <nav>
@@ -75,142 +468,187 @@
     <button onclick="showSection('prevention')">Prévention</button>
     <button onclick="showSection('traitement')">Traitement</button>
     <button onclick="showSection('temoignages')">Témoignages</button>
+    <button onclick="showSection('avis')">Avis Clients</button>
     <button onclick="showSection('contact')">Contact</button>
   </nav>
 
   <section id="accueil" class="active">
-    <img src="images/image1.jpg" alt="Image sur l'hépatite B" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 1rem;">
+     <!-- Carrousel Hero - 10 images -->
+    <div class="hero-slider">
+        <div><img src="images/image1.jpg" alt="Hepatomètre traitement naturel hépatite B"></div>
+        <div><img src="images/slide2.jpg" alt="Foie sain avec Hepatomètre"></div>
+        <div><img src="images/slide3.jpg" alt="Composition naturelle Hepatomètre"></div>
+        <div><img src="images/slide4.jpg" alt="Résultats Hepatomètre contre hépatite B"></div>
+        <div><img src="images/slide5.jpg" alt="Témoignages Hepatomètre"></div>
+        <div><img src="images/slide6.jpg" alt="Boîte Hepatomètre"></div>
+        <div><img src="images/slide7.jpg" alt="Plantes médicinales Hepatomètre"></div>
+        <div><img src="images/slide8.jpg" alt="Guérison hépatite B naturelle"></div>
+        <div><img src="images/slide9.jpg" alt="Avantages Hepatomètre"></div>
+        <div><img src="images/slide10.jpg" alt="Commander Hepatomètre"></div>
+    </div>
     
-    <h1>Qu’est-ce que l’hépatite B ?</h1>
-<p><strong>L'hépatite B est l'infection hépatique grave la plus répandue au monde. Elle est causée par le virus de l'hépatite B qui attaque et endommage le foie.Chaque année, jusqu'à un million de personnes meurent de l'hépatite B, bien qu'elle soit évitable et traitable.  .</p></strong>
-<p>L'hépatite B se transmet par contact direct avec du sang ou certains liquides corporels infectés. Le virus se transmet le plus souvent d'une femme enceinte infectée à son bébé lors de l'accouchement, en raison des échanges sanguins entre la mère et son bébé. Il se transmet également par du matériel médical ou dentaire non stérile, des rapports sexuels non protégés, des aiguilles non stériles ou par le partage d'objets personnels tels que rasoirs, brosses à dents, coupe-ongles et bijoux corporels.
-
-L'hépatite B est une « épidémie silencieuse » car la plupart des personnes infectées récemment ou chroniquement ne présentent aucun symptôme. Elles peuvent donc transmettre le virus à d'autres personnes sans le savoir et perpétuer la propagation silencieuse de l'hépatite B. Chez les personnes infectées chroniquement mais asymptomatiques, le foie est néanmoins endommagé silencieusement, ce qui peut évoluer vers une maladie hépatique grave comme la cirrhose ou le cancer du foie.</p>
-
-<p><strong>La bonne nouvelle, c'est que l'hépatite B est évitable et traitable.</strong> Un simple test sanguin permet de diagnostiquer une infection par le virus de l'hépatite B. <strong>Le dépistage est le seul moyen de savoir avec certitude si vous êtes infecté.</strong> Il existe un vaccin sûr pour prévenir l'hépatite B pour ceux qui ne sont pas encore infecté.</p>
-<p><strong>Il y a des traitements naturels efficaces permettent de gérer une infection chronique par le virus de l'hépatite B, le detruit complètement .</strong></p>
-<h3>L'hépatite B et votre foie</h3>
-<p>Le foie est un organe si important que nous ne pouvons survivre qu'un ou deux jours en cas d'arrêt complet. Si le foie est défaillant, votre corps le sera aussi. Heureusement, le foie peut fonctionner même lorsque jusqu'à 80 % de sa surface est malade ou abîmée. C'est grâce à sa capacité étonnante à se régénérer – ou à se créer – à partir de cellules hépatiques saines encore existantes.
-
-Si votre corps était une automobile, votre foie en serait le moteur. Il assure des centaines de fonctions vitales pour assurer le bon fonctionnement de tout :
-
-<li>Stocke des vitamines, du sucre et du fer pour aider à donner de l'énergie à votre corps</li>
-<li>Contrôle la production et l'élimination du cholestérol</li>
-<li>Élimine les déchets, les drogues et autres substances toxiques de votre sang</li>
-<li>Produit des facteurs de coagulation pour arrêter les saignements excessifs après des coupures ou des blessures</li>
-<li>Produit des facteurs immunitaires et élimine les bactéries de la circulation sanguine pour combattre l'infection</li>
-<li>Libère une substance appelée « bile » pour aider à digérer les aliments et à absorber les nutriments importants</li>
-</p>
-<p><strong>Il y a bien un traitement pour s'en sortir définitivement du l'hépatite B même si c'est chronique ce que les medecins n'ont pas le droit de vous dire parce que ce sont des traitements à l'aide des remèdes naturel.</strong></p>
-<h4>À propos du virus de l'hépatite B</h4>
-<p>Le virus de l'hépatite B est un petit virus à ADN appartenant à la famille des « Hepadnaviridae ». Des virus apparentés de cette famille sont également présents chez les marmottes, les écureuils terrestres, les écureuils arboricoles, les canards de Pékin et les hérons.</p>
-<h5>Structure du virus de l'hépatite B</h5>
-<p>Le virus de l'hépatite B contient une enveloppe externe et un noyau interne.</p>
-
-<li>L'enveloppe externe du virus est composée d'une protéine de surface appelée antigène de surface de l'hépatite B ou « HBsAg ». L'HBsAg peut être détecté par un simple test sanguin ; un résultat positif indique une infection par le virus de l'hépatite B.</li>
-<li>Le noyau interne du virus est une enveloppe protéique appelée antigène de base de l'hépatite B ou « HBcAg », qui contient l'ADN du virus de l'hépatite B et les enzymes utilisées dans la réplication virale.</li>
-
-<h6>Cycle de vie du virus de l'hépatite B</h6>
-<p>Le virus de l'hépatite B (VHB) a un cycle biologique complexe. Il pénètre dans la cellule hépatique hôte et est transporté dans son noyau. Une fois à l'intérieur du noyau, l'ADN viral se transforme en un ADN circulaire fermé de manière covalente (ADNccc), qui sert de matrice à la réplication virale (création d'un nouveau virus de l'hépatite B). Le nouveau virus VHB est empaqueté et quitte la cellule hépatique, l'ADNccc viral stable restant dans le noyau où il peut s'intégrer à l'ADN de la cellule hépatique hôte et continuer à créer un nouveau virus de l'hépatite B. Bien que le cycle biologique ne soit pas entièrement compris, certaines parties de ce processus de réplication sont sujettes à des erreurs, ce qui explique les différents génotypes ou « codes génétiques » du virus de l'hépatite B.</p>
+    <h2>Qu'est-ce que l'hépatite B ?</h2>
+    <p><strong>L'hépatite B est l'infection hépatique grave la plus répandue au monde. Elle est causée par le virus de l'hépatite B qui attaque et endommage le foie. Chaque année, jusqu'à un million de personnes meurent de l'hépatite B, bien qu'elle soit évitable et traitable.</strong></p>
+    
+    <div class="highlight-box animate__animated animate__fadeInLeft">
+      <p>L'hépatite B se transmet par contact direct avec du sang ou certains liquides corporels infectés. Le virus se transmet le plus souvent d'une femme enceinte infectée à son bébé lors de l'accouchement, en raison des échanges sanguins entre la mère et son bébé.</p>
+    </div>
+    
+    <p>L'hépatite B est une « épidémie silencieuse » car la plupart des personnes infectées récentes ou chroniques ne présentent aucun symptôme. Elles peuvent donc transmettre le virus à d'autres personnes sans le savoir et perpétuer la propagation silencieuse de l'hépatite B.</p>
+    
+    <p><strong>La bonne nouvelle, c'est que l'hépatite B est évitable et traitable.</strong> Un simple test sanguin permet de diagnostiquer une infection par le virus de l'hépatite B. <strong>Le dépistage est le seul moyen de savoir avec certitude si vous êtes infecté.</strong></p>
+    
+    <div class="product-highlight animate__animated animate__pulse animate__delay-1s">
+      <h3>Hepatomètre</h3>
+      <p>Notre traitement naturel révolutionnaire pour éliminer définitivement l'hépatite B</p>
+      <div class="price">50.000 FCFA / boîte</div>
+      <a href="#contact" class="cta-button" onclick="showSection('contact')">Commander maintenant</a>
+    </div>
+    
+    <h3>L'hépatite B et votre foie</h3>
+    <p>Le foie est un organe si important que nous ne pouvons survivre qu'un ou deux jours en cas d'arrêt complet. Si le foie est défaillant, votre corps le sera aussi. Heureusement, le foie peut fonctionner même lorsque jusqu'à 80% de sa surface est malade ou abîmée.</p>
+    
+    <ul>
+      <li>Stocke des vitamines, du sucre et du fer pour aider à donner de l'énergie à votre corps</li>
+      <li>Contrôle la production et l'élimination du cholestérol</li>
+      <li>Élimine les déchets, les drogues et autres substances toxiques de votre sang</li>
+      <li>Produit des facteurs de coagulation pour arrêter les saignements excessifs</li>
+    </ul>
+    
+    <p><strong>Il y a bien un traitement pour s'en sortir définitivement de l'hépatite B même si c'est chronique : Hepatomètre, notre solution naturelle efficace.</strong></p>
   </section>
 
   <section id="symptomes">
-    <h2>Symptômes</h2>
+    <h2>Symptômes de l'hépatite B</h2>
+    <div class="image-slider">
+        <div class="slide-image"><img src="images/symptome1.jpg" alt="Fatigue chronique"></div>
+        <div class="slide-image"><img src="images/symptome2.jpg" alt="Jaunisse"></div>
+        <div class="slide-image"><img src="images/symptome3.jpg" alt="Douleurs abdominales"></div>
+        <div class="slide-image"><img src="images/symptome4.jpg" alt="Nausées"></div>
+    <div class="slide-image"><img src="images/symptome5.jpg" alt="Perte d'appétit"></div>
+   <div class="slide-image"><img src="images/symptome6.jpg" alt="Gonflement"></div>
+   
+    </div>
     
-   <img src="images/image3.jpg" alt="Image sur l'hépatite B" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 1rem;">
-    <p>Ces symptômes incluent notamment les douleurs abdominales, la fatigue chronique, le jaunissement des yeux, la coloration foncée des urines, les troubles intestinaux, le gonflement abdominal, ainsi que l’apparition de boutons d’origine hépatique, entre autres.</p>
-    <p>Chez certaines personnes infectées, le virus de l’hépatite B peut rester silencieux pendant de longues années. On parle alors d’un virus inactif ou en sommeil : il est présent dans l’organisme, mais ne provoque aucun symptôme apparent.C’est ça qui est le plus dangereux : lorsque le virus devient actif, les symptômes apparaissent automatiquement, souvent accompagnés d’effets inattendus</p>
-    <p><strong>Ce n'est pas bon signe si on vous dit que le virus est inactif dans votre organisme, c’est pourquoi vous devez rapidement chercher une solution, et ce, le plus tôt possible</strong></p>
+    <p>Ces symptômes incluent notamment :</p>
+    <ul>
+      <li>Douleurs abdominales</li>
+      <li>Fatigue chronique</li>
+      <li>Jaunissement des yeux (jaunisse)</li>
+      <li>Coloration foncée des urines</li>
+      <li>Troubles intestinaux</li>
+      <li>Gonflement abdominal</li>
+      <li>Apparition de boutons d'origine hépatique</li>
+    </ul>
     
+    <div class="highlight-box animate__animated animate__fadeInRight">
+      <p>Chez certaines personnes infectées, le virus de l'hépatite B peut rester silencieux pendant de longues années. On parle alors d'un virus inactif ou en sommeil : il est présent dans l'organisme, mais ne provoque aucun symptôme apparent.</p>
+    </div>
+    
+    <p><strong>Ce n'est pas bon signe si on vous dit que le virus est inactif dans votre organisme, c'est pourquoi vous devez rapidement chercher une solution, et ce, le plus tôt possible.</strong></p>
+    
+    <div class="product-highlight animate__animated animate__pulse">
+      <h3>Ne laissez pas l'hépatite B détruire votre foie</h3>
+      <p>Hepatomètre peut vous aider à éliminer le virus, même dans les cas chroniques</p>
+      <a href="#contact" class="cta-button" onclick="showSection('contact')">Demander conseil</a>
+    </div>
   </section>
 
   <section id="prevention">
-    <h2>Prévention et Conseil</h2>
-    <ul>
+    <h2>Prévention et Conseils</h2>
+    
+    <div class="highlight-box animate__animated animate__fadeInLeft">
       <p><strong>1. 💉 Vaccination</strong></p>
-
-<li>Le vaccin contre l’hépatite B est la meilleure prévention.</li>
-
-<li>Recommandé dès la naissance ou à tout âge si non vacciné.</li>
-
-<li>Il est sûr et très efficace (plus de 95 % de protection).</li>
-
-
-<p><strong>2. ⚠️ Précautions sexuelles</strong></p>
-
-<li>Utilisez systématiquement le préservatif avec de nouveaux partenaires.</li>
-
-<li>Faites-vous dépister régulièrement si vous êtes sexuellement actif(ve) avec plusieurs partenaires.</li>
-
-
-<p><strong>3. 🩸 Évitez le contact avec le sang</strong></p>
-
-<li>Ne partagez jamais des aiguilles, seringues, rasoirs, coupe-ongles, brosses à dents.</li>
-
-<li>Vérifiez l’hygiène et la stérilisation du matériel chez les tatoueurs, perceurs, salons de manucure.</li>
-
-
-<p><strong>4. 🏥 Dépistage</strong></p>
-
-<li>Si vous êtes à risque (contacts à risque, originaire d’une région où l’hépatite B est fréquente, professionnel de santé), faites un test de dépistage.</li>
-
-<li>Cela permet de détecter l’infection même sans symptôme et de protéger les autres.</li>
-
-
-<p><strong>5. 👶 Prévention chez les nouveau-nés</strong></p>
-
-Si la mère est infectée, il est urgent de vacciner le bébé à la naissance et d'administrer une immunoglobuline spécifique pour prévenir la transmission.
-
-
-<p><strong>6. 🌍 Voyages à l'étranger</strong></p>
-
-<li>Si vous partez dans une zone à forte prévalence d’hépatite B, faites-vous vacciner avant le départ.</li>
-
-<li>Évitez les soins médicaux non urgents ou les pratiques esthétiques dans des conditions douteuses.</li>
-
-
-
----
-
-<p><stong>🧑‍⚕️ Si vous êtes porteur du VHB</strong></p>
-
-<li>Évitez l’alcool, qui aggrave les lésions hépatiques.</li>
-
-<li>Informez vos partenaires ou professionnels de santé si nécessaire.</li>
-
-<li>Ne donnez pas de sang ni d’organes.</li>
-</p>
-    </ul>
+      <ul>
+        <li>Le vaccin contre l'hépatite B est la meilleure prévention.</li>
+        <li>Recommandé dès la naissance ou à tout âge si non vacciné.</li>
+        <li>Il est sûr et très efficace (plus de 95% de protection).</li>
+      </ul>
+    </div>
+    
+    <div class="highlight-box animate__animated animate__fadeInRight">
+      <p><strong>2. ⚠️ Précautions sexuelles</strong></p>
+      <ul>
+        <li>Utilisez systématiquement le préservatif avec de nouveaux partenaires.</li>
+        <li>Faites-vous dépister régulièrement si vous êtes sexuellement actif(ve) avec plusieurs partenaires.</li>
+      </ul>
+    </div>
+    
+    <div class="highlight-box animate__animated animate__fadeInLeft">
+      <p><strong>3. 🩸 Évitez le contact avec le sang</strong></p>
+      <ul>
+        <li>Ne partagez jamais des aiguilles, seringues, rasoirs, coupe-ongles, brosses à dents.</li>
+        <li>Vérifiez l'hygiène et la stérilisation du matériel chez les tatoueurs, perceurs, salons de manucure.</li>
+      </ul>
+    </div>
+    
+    <div class="highlight-box animate__animated animate__fadeInRight">
+      <p><strong>4. 🏥 Dépistage</strong></p>
+      <ul>
+        <li>Si vous êtes à risque, faites un test de dépistage.</li>
+        <li>Cela permet de détecter l'infection même sans symptôme et de protéger les autres.</li>
+      </ul>
+    </div>
+    
+    <div class="highlight-box animate__animated animate__fadeInLeft">
+      <p><strong>5. 👶 Prévention chez les nouveau-nés</strong></p>
+      <p>Si la mère est infectée, il est urgent de vacciner le bébé à la naissance et d'administrer une immunoglobuline spécifique pour prévenir la transmission.</p>
+    </div>
+    
+    <div class="product-highlight animate__animated animate__pulse">
+      <h3>Vous êtes déjà infecté ?</h3>
+      <p>Hepatomètre offre une solution naturelle pour éliminer le virus de l'hépatite B</p>
+      <a href="#traitement" class="cta-button" onclick="showSection('traitement')">Découvrir le traitement</a>
+    </div>
   </section>
+
   <section id="traitement">
-    <h2>Traitement</h2>
-<img src="images/image2.jpg" alt="Image sur l'hépatite B" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 1rem;">
-<p>Si vous êtes testé positif au virus de l’hépatite B pendant plus de 6 mois, cela indique que vous souffrez d’une infection chronique.</p>
-<p>Nous mettons à votre disposition des traitements naturels d’une grande efficacité, capables d’éliminer définitivement contrairement aux traitements de l'hôpital</p>
-<p>A l'hôpital les médecin vous prescriptent des antiviraux comme:
+    <h2>Traitement Naturel Hepatomètre</h2>
+    <img src="images/image2.jpg" alt="Traitement naturel Hepatomètre" class="animate__animated animate__fadeIn">
+    
+    <p>Si vous êtes testé positif au virus de l'hépatite B pendant plus de 6 mois, cela indique que vous souffrez d'une infection chronique.</p>
+    
+    <div class="highlight-box animate__animated animate__fadeInLeft">
+      <p><strong>Nous mettons à votre disposition des traitements naturels d'une grande efficacité, capables d'éliminer définitivement le virus contrairement aux traitements de l'hôpital.</strong></p>
+    </div>
+    
+    <p>A l'hôpital, les médecins vous prescrivent des antiviraux comme :</p>
+    <ul>
+      <li>Ténofovir</li>
+      <li>Entécavir</li>
+    </ul>
+    <p>Ces médicaments ne guérissent pas l'hépatite B, ils ralentissent seulement la multiplication du virus.</p>
+    
+    <h3>Pourquoi choisir Hepatomètre ?</h3>
+    <ul>
+      <li>Formule 100% naturelle à base de plantes médicinales</li>
+      <li>Élimine progressivement le virus de l'hépatite B</li>
+      <li>Restaure la santé du foie</li>
+      <li>Renforce le système immunitaire</li>
+      <li>Sans effets secondaires nocifs</li>
+      <li>Résultats prouvés par des témoignages</li>
+    </ul>
 
-<li>Ténofovir</li> 
-
-<li>Entécavir</li>
-
-
-Ces médicaments ne guérissent pas l'hépatite B, ils ralentissent la multiplication du virus.</p>
-
-<p>L’hépatite B est une maladie virale grave qui touche des millions de personnes dans le monde depuis de nombreuses années, avec des conséquences parfois sévères sur la santé du foie.</p>
-
-
-<p>À vous qui souffrez profondément de cette maladie, je vous propose une offre d’essai : deux boîtes de nos produits au tarif préférentiel de 50.000 francs CFA par boite. Cela vous permettra de constater par vous-même l’efficacité de nos solutions, à travers la disparition progressive des symptômes, jusqu’à l’élimination complète du virus.</p>
+        <div class="product-highlight animate__animated animate__pulse">
+      <h3>Offre Spéciale Essai</h3>
+      <p>2 boîtes de Hepatomètre au prix de 50.000 FCFA par boîte</p>
+      <p><small>Permet de constater l'efficacité à travers la disparition progressive des symptômes</small></p>
+      <a href="#contact" class="cta-button" onclick="showSection('contact')">Commander l'offre essai</a>
+    </div>
+    
+    <h3>Mode d'emploi</h3>
+    <p>Prendre 2 cuillères matin et soir avec un grand verre d'eau, pendant 3 mois minimum pour des résultats optimaux.</p>
   </section>
-  
-  
- <section id="temoignages">
-    <h2>Témoignages</h2>
-    <img src="images/image4.jpg" alt="Image sur l'hépatite B" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 1rem;">
-   <h2>Je m'appelle Rosine Djohoun</h2>
-   
-    <p>Je suis la preuve vivante qu’on peut guérir avec le sourire… et un petit coup de pouce de la nature !"
 
-Il y a trois ans, on m’a diagnostiqué une hépatite B. C’était un choc. Je ne m’y attendais pas du tout : pas de symptômes, une vie bien remplie… et pourtant, le virus était là.</p>
+  <section id="temoignages">
+    <h2>Témoignages de Guérison</h2>
+    
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <img src="images/temoignage1.jpg" alt="Rosine Djohoun">
+        <h4> Je m'appelle Rosine Djohoun</h4>
+       
+<p>Il y a trois ans, on m’a diagnostiqué une hépatite B. C’était un choc. Je ne m’y attendais pas du tout : pas de symptômes, une vie bien remplie… et pourtant, le virus était là.</p>
 
 <p>Heureusement, j’ai été bien entourée: une famille présente, et surtout, une découverte qui a changé ma vie : un produit naturel appelé Hepatomètre 🌿.
 
@@ -222,11 +660,12 @@ Petit à petit, les analyses se sont améliorées. Mon foie allait mieux, je me 
     
     "Quand on nous a parlé d’hépatite B, on a eu peur pour nous… et pour notre futur bébé. Mais grâce à Dieu, aux soins médicaux et au soutien de la nature, tout s’est bien terminé."
 
-    <img src="images/image5.jpg" alt="Image sur l'hépatite B" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 1rem;">
-
-<h3>Histoire d'un couple</h3>
-
-<p>Nous sommes Yvette et Malik. Il y a deux ans, lors de nos essais pour avoir un enfant, nous avons découvert que j’étais porteuse chronique de l’hépatite B. Ce fut un vrai choc, surtout en pensant à la grossesse.</p>
+      </div>
+      
+      <div class="testimonial">
+        <img src="images/temoignage2.jpg" alt="Couple Yvette et Malik">
+        <h4>Yvette</h4>
+        <p>Nous sommes Yvette et Malik. Il y a deux ans, lors de nos essais pour avoir un enfant, nous avons découvert que j’étais porteuse chronique de l’hépatite B. Ce fut un vrai choc, surtout en pensant à la grossesse.</p>
 
 Heureusement,nous avons découvert un produit naturel à base de plantes, recommandé pour renforcer la santé du foie :
 
@@ -251,31 +690,261 @@ ne perdez pas espoir, entourez-vous de bons professionnels, informez-vous, et ex
  💬 "Aujourd’hui, nous sommes une famille heureuse. Et tout a commencé avec un peu de peur… et beaucoup d’espoir."</p>
  
  <p><strong>"Hepatomètre a été un vrai soutien naturel dans ce parcours." – Yvette</strong></p>
+  
+
+      </div>
+      
+      <div class="testimonial">
+        <img src="images/temoignage3.jpg" alt="Koffi">
+        <h4>Jean Koffi</h4>
+       <p>Mon combat contre l'hépatite B a duré plus de cinq longues années. J'avais perdu espoir. Après des traitements hospitaliers interminables, des médicaments coûteux et de nombreux effets secondaires, les médecins me répétaient toujours la même chose : ‘Patience, on continue, on verra...’ Mais les résultats ne venaient jamais. Mon état de santé restait instable, et mes analyses ne montraient aucune amélioration significative. Je vivais dans l’angoisse permanente, enchaînant les rendez-vous médicaux sans jamais entrevoir la fin de ce cauchemar.</p>
+
+
+
+ <p>Puis, un jour, un ami m’a parlé d’Hepatomètre. J’étais sceptique au début, bien sûr — après tant d’échecs, difficile de croire à une nouvelle solution. Mais j’ai décidé de tenter une dernière fois, un peu comme un dernier espoir lancé au destin.
+
+
+
+ Et là, le miracle a commencé. En seulement trois mois de traitement avec Hepatomètre, mes symptômes ont diminué, mon énergie est revenue, et surtout : mes analyses sont redevenues normales. Je n’en revenais pas. Mon médecin lui-même était surpris de la rapidité et de l’efficacité des résultats. Pour la première fois depuis des années, j’ai pu respirer, vivre normalement, reprendre espoir.
+</p>
+
+
+<p>pAujourd’hui, je suis en pleine forme. Hepatomètre a changé ma vie. Ce n’est pas juste un traitement, c’est une renaissance. Je recommande sincèrement ce produit à tous ceux qui, comme moi, se sentent prisonniers d’une maladie qui semble sans fin. Il y a toujours une lumière au bout du tunnel. Pour moi, cette lumière s’appelait Hepatomètre.</p>
+      </div>
+      
+      <div class="testimonial">
+        <img src="images/temoignage4.jpg" alt="Amina Diallo">
+        <h4>Amina Diallo</h4>
+<p>Je me souviens encore du jour où l’on m’a annoncé que j’étais atteinte d’hépatite. C’était comme si le sol s’était dérobé sous mes pieds. J’avais à peine 32 ans, une vie devant moi, des projets, des rêves… et d’un coup, tout s’est figé. Pendant trois longues années, j’ai suivi un traitement hospitalier sans relâche. J’ai pris tous les médicaments qu’on m’a prescrits,Ténofovir antécavir, j'ai fait tous les examens, consulté plusieurs spécialistes. Chaque fois que je faisais une prise de sang, j’espérais un miracle. Mais les résultats restaient les mêmes. Le virus était toujours là, et avec lui, la fatigue, l’anxiété, la peur du lendemain.
+
+
+
+C’est dans cette période de découragement total que j'ai apperçu l'histoire d'une dame sur Facebook sur  l’Hepatomètre. Au début, je doutais. Trop de déceptions, trop de douleurs. Mais quelque chose en moi m’a poussée à essayer, juste une dernière fois. Et aujourd’hui, je bénis ce jour où j’ai pris cette décision.</p>
+
+
+
+<p>En un mois à peine, j’ai senti mon corps changer. J’avais plus d’énergie, je dormais mieux, je recommençais à sourire. Et puis il y a eu ce jour où j’ai reçu mes résultats : le virus avait disparu. Mes analyses étaient normales. J’ai relu les résultats plusieurs fois, les larmes aux yeux. Je n’arrivais pas à y croire. Pour la première fois depuis trois ans, j’étais libre. Libérée de cette maladie, de cette peur constante. Je pleurais, mais c’étaient des larmes de joie.</p>
+
+
+
+<p>Hepatomètre m’a redonné plus que la santé. Il m’a redonné ma vie, ma force, ma paix intérieure. À toutes les personnes qui traversent ce que j’ai vécu, je vous en supplie : ne perdez pas espoir. Parfois, la solution existe, même si elle ne vient pas d’où on l’attend.</p>
+      </div>
+    </div>
+    
+    <div class="product-highlight animate__animated animate__pulse">
+      <h3>Prêt à commencer votre chemin vers la guérison ?</h3>
+      <p>Commandez Hepatomètre dès aujourd'hui et retrouvez une santé optimale</p>
+      <a href="#contact" class="cta-button" onclick="showSection('contact')">Je commande maintenant</a>
+    </div>
   </section>
 
-      <section id="contact" class="section">
-        <h2>Laissez nous votre avis</h2>
-        <form action="https://formsubmit.co/vitaplante01@gmail.com" method="POST">
-          <input type="text" name="name" placeholder="Votre nom" required />
-          <input type="email" name="email" placeholder="Votre email" required />
-          <textarea name="message" placeholder="Votre message" required></textarea>
-          <button type="submit" class="cta">Envoyer</button>
-        </form>
-        </p>
-      </section>
+  <section id="avis">
+    <h2>Avis Clients</h2>
+    <p>Découvrez ce que nos clients disent de Hepatomètre</p>
+    
+    <div class="review-slider">
+      <div class="review">
+        <img src="images/avis1.jpg" alt="Client 1">
+        <div class="stars">★★★★★</div>
+        <h4>Marc T.</h4>
+        <p>"Résultats impressionnants après seulement 3 mois de traitement. Mes analyses se sont nettement améliorées."</p>
+        <div class="date">15/03/2023</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis2.jpg" alt="Client 2">
+        <div class="stars">★★★★★</div>
+        <h4>Sophie K.</h4>
+        <p>"Produit naturel efficace. La fatigue a disparu et j'ai retrouvé mon énergie. Je continue le traitement."</p>
+        <div class="date">22/04/2023</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis3.jpg" alt="Client 3">
+        <div class="stars">★★★★☆</div>
+        <h4>Paul F.</h4>
+        <p>"Bonne amélioration après 2 boîtes. Service client très réactif pour les conseils d'utilisation."</p>
+        <div class="date">05/05/2023</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis4.jpg" alt="Client 4">
+        <div class="stars">★★★★★</div>
+        <h4>Fatou D. </h4>
+        <p>"Mon médecin était surpris par l'amélioration de mes résultats. Je recommande vivement Hepatomètre."</p>
+        <div class="date">24/06/2024</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis5.jpg" alt="Client 5">
+        <div class="stars">★★★★★</div>
+        <h4>Eric S.</h4>
+        <p>"Enfin un traitement naturel qui fonctionne contre l'hépatite B. Après 4 mois, mon virus est indétectable."</p>
+        <div class="date">14/12/2023</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis6.jpg" alt="Client 6">
+        <div class="stars">★★★★☆</div>
+        <h4>Aïcha B.</h4>
+        <p>"Satisfaite des résultats. Les symptômes ont disparu progressivement. Livraison rapide."</p>
+        <div class="date">12/02/2025</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis7.jpg" alt="Client 7">
+        <div class="stars">★★★★★</div>
+        <h4>Thomas L.</h4>
+        <p>"Je suis sous Hepatomètre depuis 5 mois et mes dernières analyses montrent une nette amélioration."</p>
+        <div class="date">21/03/2025</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis8.jpg" alt="Client 8">
+        <div class="stars">★★★★★</div>
+        <h4>Nadia K.</h4>
+        <p>"Ce produit a changé ma vie. Après des années d'hépatite B chronique, je me sens enfin guérie."</p>
+        <div class="date">08/10/2023</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis9.jpg" alt="Client 9">
+        <div class="stars">★★★★☆</div>
+        <h4>David P.</h4>
+        <p>"Bon rapport qualité-prix. Effets positifs sur ma santé globale en plus de l'action sur l'hépatite B."</p>
+        <div class="date">19/11/2023</div>
+      </div>
+      
+      <div class="review">
+        <img src="images/avis10.jpg" alt="Client 10">
+        <div class="stars">★★★★★</div>
+        <h4>Mariam C.</h4>
+        <p>"Je témoigne que Hepatomètre est efficace. Après 3 mois, plus de symptômes et analyses normales."</p>
+        <div class="date">05/04/2025</div>
+      </div>
+    </div>
+    
+    <div class="product-highlight animate__animated animate__pulse">
+      <h3>Rejoignez nos nombreux clients satisfaits</h3>
+      <p>Commandez Hepatomètre et faites le premier pas vers la guérison</p>
+      <a href="#contact" class="cta-button" onclick="showSection('contact')">Je passe commande</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Pour:</p>
+    <li>commander Hepatomètre</li>
+   <li>donner votre avis simple</li>
+   <li>donner votre témoignage</li>
+   <p>ou pour toute autre question, remplissez le formulaire ci-dessous :</p>
+    
+    <form action="https://formsubmit.co/vitaplante01@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Votre nom complet" required>
+      <input type="email" name="email" placeholder="vitaplante01@gmail.com" required>
+      <input type="tel" name="phone" placeholder="Votre numéro de téléphone">
+      <textarea name="message" placeholder="Votre message ou commande" required></textarea>
+      <button type="submit" class="cta-button">Envoyer</button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <h3>Ou contactez-nous directement en cliquant sur l'icone WhatsApp en bas à droite</h3>
+      
+    </div>
+  </section>
 
   <!-- Bouton WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/22956077109" target="_blank" title="Contactez-nous sur WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2023 Hepatomètre - Traitement Naturel de l'Hépatite B</p>
+    <p>Tous droits réservés</p>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       sections.forEach(section => section.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      
+      // Scroll vers le haut de la section
+      window.scrollTo({
+        top: document.getElementById(id).offsetTop - 100,
+        behavior: 'smooth'
+      });
     }
+    
+    // Initialisation des carrousels
+    $(document).ready(function(){
+      $('.testimonial-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false
+      });
+         // Initialisation du carrousel hero
+        $('.hero-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: false,
+            pauseOnHover: false
+        });
+      $('.image-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    arrows: false,
+    fade: true,
+    pauseOnHover: false
+});
+      
+      $('.review-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
   </script>
-
 </body>
-  </html>
+</html>
