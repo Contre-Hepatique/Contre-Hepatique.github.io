@@ -106,7 +106,130 @@ Relleno: 2.5rem 1.5rem;
 Ancho máximo: 1200px;
 Margen: 0 automático;
 }
+.active {
+display: block;
+animación: fadeIn 0.8s ease;
+}
 
+h2 {
+color: var(--primary-color);
+margin-bottom: 1.5rem;
+font-size: 2rem;
+position: relative;
+display: inline-block;
+}
+
+h2::after {
+content: "";
+position: absolute;
+bottom: -8px;
+left: 0;
+width: 60px;
+height: 3px;
+background-color: var(--secondary-color);
+}
+
+h3 {
+color: var(--primary-color);
+margin: 1.5rem 0 1rem;
+font-size: 1.5rem;
+}
+
+p {
+margin-bottom: 1.2rem;  }
+
+ul, ol {
+margen inferior: 1.5rem;
+relleno izquierdo: 1.5rem;
+}
+
+li {
+margen inferior: 0.5rem;
+}
+
+strong {
+color: var(--color primario);
+}
+
+img {
+ancho máximo: 100%;
+alto: automático;
+radio del borde: 10px;
+margen: 1.5rem 0;
+sombra del cuadro: 0 5px 15px rgba(0, 0, 0, 0.1);
+transición: transformación 0.3s facilidad;
+}
+
+img:hover {
+transformación: escala(1.02);
+}
+
+.highlight-box {
+color de fondo: rgba(0, 123, 94, 0.1);  borde izquierdo: 4px sólido var(--color primario);
+relleno: 1.5rem;
+margen: 2rem 0;
+radio del borde: 0 8px 8px 0;
+}
+
+.whatsapp-float {
+posición: fija;
+inferior: 30px;
+derecha: 30px;
+color de fondo: var(--color secundario);
+color: blanco;
+radio del borde: 50%;
+ancho: 60px;
+alto: 60px;
+alineación del texto: centrada;
+tamaño de fuente: 30px;
+sombra del cuadro: 0 4px 12px rgba(37, 211, 102, 0.3);
+índice z: 100;
+visualización: flexible;
+alineación de elementos: centrada;
+justificación del contenido: centrada;  Transición: 0.3 s de suavidad;
+Animación: Pulso 2 s infinito;
+}
+
+.whatsapp-float:hover {
+background-color: #1ebd58;
+transform: scale(1.1);
+box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.testimonial-slider, .review-slider {
+margin: 2rem 0;
+}
+
+.testimonial, .review {
+background-color: blanco;
+border-radius: 10px;
+padding: 1.5rem;
+margin: 0 1rem;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  borde: 1px sólido rgba(0, 0, 0, 0.05);
+}
+
+.testimonial img, .review img {
+ancho: 80px;
+alto: 80px;
+radio del borde: 50%;
+ajuste al objeto: cubierta;
+margen: 0 auto 1rem;
+pantalla: bloque;
+borde: 3px sólido var(--color primario);
+}
+
+.testimonial h4, .review h4 {
+color: var(--color primario);
+alineación del texto: centrado;
+margen inferior: 0.5rem;
+}
+
+.testimonial p, .review p {
+estilo de fuente: cursiva;
+color: #555;
+alineación del texto: centrado;
+ }
+ 
   <section id="accueil" class="active">
      <!-- Carrousel Hero - 10 images -->
     <div class="hero-slider">
