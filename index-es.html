@@ -393,7 +393,130 @@ El hepatómetro me ha devuelto algo más que mi salud. Él me devolvió la vida,
       <a href="#contact" class="cta-button" onclick="showSection('contact')">Estoy realizando un pedido</a>
     </div>
   </sección>
-  <!-- Resto de las secciones traducidas al español -->
+ 
+
+     <section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Pour:</p>
+    <li>commander Hepatomètre</li>
+   <li>donner votre avis simple</li>
+   <li>donner votre témoignage</li>
+   <p>ou pour toute autre question, remplissez le formulaire ci-dessous :</p>
+    
+    <form action="https://formsubmit.co/vitaplante01@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Votre nom complet" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <input type="tel" name="phone" placeholder="Votre numéro de téléphone">
+      <textarea name="message" placeholder="Votre message ou commande" required></textarea>
+
+       <!-- Redirection après envoi -->
+    <input type="hidden" name="_next" value="https://contre-hepatique.github.io/merci.html">
+    
+    <!-- Désactiver Captcha -->
+    <input type="hidden" name="_captcha" value="false">
+      
+      <button type="submit" class="cta-button">Envoyer</button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <h3>Ou contactez-nous directement en cliquant sur l'icone WhatsApp en bas à droite</h3>
+      
+    </div>
+  </section>
+
+  <!-- Bouton WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/22956077109" target="_blank" title="Contactez-nous sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2023 Hepatomètre - Traitement Naturel de l'Hépatite B</p>
+    <p>Tous droits réservés</p>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      
+      // Scroll vers le haut de la section
+      window.scrollTo({
+        top: document.getElementById(id).offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Initialisation des carrousels
+    $(document).ready(function(){
+      $('.testimonial-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false
+      });
+         // Initialisation du carrousel hero
+        $('.hero-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: false,
+            pauseOnHover: false
+        });
+      $('.image-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    arrows: false,
+    fade: true,
+    pauseOnHover: false
+});
+      
+      $('.review-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
-</html>
+   </html>
+     
