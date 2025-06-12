@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hepatometer - Natural Treatment for Hepatitis B</title>
+  <title>Hepatomètre - Traitement Naturel de l'Hépatite B</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
@@ -13,491 +13,86 @@
   <!-- Slick Carousel -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <style>
-    /* Same CSS as original */
-  </style>
-</head>
-<body>
-
-  <header class="animate__animated animate__fadeIn">
-    <h1>Hepatometer - Natural Treatment for Hepatitis B</h1>
-    <p>Discover the effective natural solution to permanently eliminate hepatitis B</p>
-  </header>
-
-  <nav>
-    <button onclick="showSection('accueil')">Home</button>
-    <button onclick="showSection('symptomes')">Symptoms</button>
-    <button onclick="showSection('prevention')">Prevention</button>
-    <button onclick="showSection('traitement')">Treatment</button>
-    <button onclick="showSection('temoignages')">Testimonials</button>
-    <button onclick="showSection('avis')">Reviews</button>
-    <button onclick="showSection('contact')">Contact</button>
-  </nav>
-
-  <section id="accueil" class="active">
-     <!-- Hero Carousel - 10 images -->
-    <div class="hero-slider">
-        <div><img src="images/image1.jpg" alt="Hepatometer natural hepatitis B treatment"></div>
-        <div><img src="images/slide2.jpg" alt="Healthy liver with Hepatometer"></div>
-        <div><img src="images/slide3.jpg" alt="Natural composition Hepatometer"></div>
-        <div><img src="images/slide4.jpg" alt="Hepatometer results against hepatitis B"></div>
-        <div><img src="images/slide5.jpg" alt="Hepatometer testimonials"></div>
-        <div><img src="images/slide6.jpg" alt="Hepatometer box"></div>
-        <div><img src="images/slide7.jpg" alt="Medicinal plants Hepatometer"></div>
-        <div><img src="images/slide8.jpg" alt="Natural hepatitis B cure"></div>
-        <div><img src="images/slide9.jpg" alt="Hepatometer benefits"></div>
-        <div><img src="images/slide10.jpg" alt="Order Hepatometer"></div>
-    </div>
+    :root {
+      --primary-color: #007B5E;
+      --secondary-color: #25D366;
+      --accent-color: #FF6B6B;
+      --light-color: #f8f9fa;
+      --dark-color: #343a40;
+    }
     
-    <h2>What is Hepatitis B?</h2>
-    <p><strong>Hepatitis B is the most widespread serious liver infection in the world. It is caused by the hepatitis B virus that attacks and damages the liver. Every year, up to one million people die from hepatitis B, although it is preventable and treatable.</strong></p>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     
-    <div class="highlight-box animate__animated animate__fadeInLeft">
-      <p>Hepatitis B is transmitted through direct contact with infected blood or certain body fluids. The virus is most often transmitted from an infected pregnant woman to her baby during childbirth, due to blood exchange between mother and baby.</p>
-    </div>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
     
-    <p>Hepatitis B is a "silent epidemic" because most recently or chronically infected people show no symptoms. They can therefore transmit the virus to others without knowing it and perpetuate the silent spread of hepatitis B.</p>
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #005f47);
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
     
-    <p><strong>The good news is that hepatitis B is preventable and treatable.</strong> A simple blood test can diagnose hepatitis B virus infection. <strong>Testing is the only way to know for sure if you're infected.</strong></p>
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+      background-size: cover;
+      opacity: 0.1;
+    }
     
-    <div class="product-highlight animate__animated animate__pulse animate__delay-1s">
-      <h3>Hepatometer</h3>
-      <p>Our revolutionary natural treatment to permanently eliminate hepatitis B</p>
-      <div class="price">50,000 FCFA / box</div>
-      <a href="#contact" class="cta-button" onclick="showSection('contact')">Order now</a>
-    </div>
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      animation: fadeInDown 1s ease;
+    }
     
-    <h3>Hepatitis B and your liver</h3>
-    <p>The liver is such an important organ that we cannot survive more than one or two days if it stops functioning completely. If the liver fails, your body will fail too. Fortunately, the liver can function even when up to 80% of its surface is diseased or damaged.</p>
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
     
-    <ul>
-      <li>Stores vitamins, sugar and iron to help give energy to your body</li>
-      <li>Controls the production and elimination of cholesterol</li>
-      <li>Removes waste, drugs and other toxic substances from your blood</li>
-      <li>Produces clotting factors to stop excessive bleeding</li>
-    </ul>
-  </sectio>
-
-
-  <section id="symptomes">
-    <h2>Symptoms of Hepatitis B</h2>
-    <div class="image-slider">
-        <div class="slide-image"><img src="images/symptome1.jpg" alt="Chronic fatigue"></div>
-        <div class="slide-image"><img src="images/symptome2.jpg" alt="Jaundice"></div>
-        <div class="slide-image"><img src="images/symptome3.jpg" alt="Abdominal pain"></div>
-        <div class="slide-image"><img src="images/symptome4.jpg" alt="Nausea"></div>
-        <div class="slide-image"><img src="images/symptome5.jpg" alt="Loss of appetite"></div>
-        <div class="slide-image"><img src="images/symptome6.jpg" alt="Swelling"></div>
-    </div>
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: var(--light-color);
+      padding: 0.8rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
     
-    <p>These symptoms include in particular:</p>
-    <ul>
-      <li>Abdominal pain</li>
-      <li>Chronic fatigue</li>
-      <li>Yellowing of the eyes (jaundice)</li>
-      <li>Dark-colored urine</li>
-      <li>Intestinal disorders</li>
-      <li>Abdominal swelling</li>
-      <li>Appearance of liver-related skin rashes</li>
-    </ul>
-    
-    <div class="highlight-box animate__animated animate__fadeInRight">
-      <p>In some infected individuals, the hepatitis B virus can remain silent for many years. This is known as an inactive or dormant virus: it is present in the body but does not cause any apparent symptoms.</p>
-    </div>
-    
-    <p><strong>It is not a good sign if you are told that the virus is inactive in your body, which is why you should quickly seek a solution, as soon as possible.</strong></p>
-    
-    <div class="product-highlight animate__animated animate__pulse">
-      <h3>Don't let hepatitis B destroy your liver</h3>
-      <p>Hepatomètre can help you eliminate the virus, even in chronic cases</p>
-      <a href="#contact" class="cta-button" onclick="showSection('contact')">Request advice</a>
-    </div>
-</section>
-
-<section id="prevention">
-    <h2>Prevention and Tips</h2>
-    
-    <div class="highlight-box animate__animated animate__fadeInLeft">
-      <p><strong>1. 💉 Vaccination</strong></p>
-      <ul>
-        <li>The hepatitis B vaccine is the best prevention.</li>
-        <li>Recommended from birth or at any age if not vaccinated.</li>
-        <li>It is safe and highly effective (over 95% protection).</li>
-      </ul>
-    </div>
-    
-    <div class="highlight-box animate__animated animate__fadeInRight">
-      <p><strong>2. ⚠️ Sexual precautions</strong></p>
-      <ul>
-        <li>Always use a condom with new partners.</li>
-        <li>Get tested regularly if you are sexually active with multiple partners.</li>
-      </ul>
-    </div>
-    
-    <div class="highlight-box animate__animated animate__fadeInLeft">
-      <p><strong>3. 🩸 Avoid contact with blood</strong></p>
-      <ul>
-        <li>Never share needles, syringes, razors, nail clippers, or toothbrushes.</li>
-        <li>Check the hygiene and sterilization of equipment at tattoo parlors, piercing studios, and nail salons.</li>
-      </ul>
-    </div>
-    
-    <div class="highlight-box animate__animated animate__fadeInRight">
-      <p><strong>4. 🏥 Screening</strong></p>
-      <ul>
-        <li>If you are at risk, get tested.</li>
-        <li>This allows detection of the infection even without symptoms and helps protect others.</li>
-      </ul>
-    </div>
-    
-    <div class="highlight-box animate__animated animate__fadeInLeft">
-      <p><strong>5. 👶 Prevention in newborns</strong></p>
-      <p>If the mother is infected, it is urgent to vaccinate the baby at birth and administer a specific immunoglobulin to prevent transmission.</p>
-    </div>
-    
-    <div class="product-highlight animate__animated animate__pulse">
-      <h3>Already infected?</h3>
-      <p>Hepatomètre offers a natural solution to eliminate the hepatitis B virus</p>
-      <a href="#traitement" class="cta-button" onclick="showSection('traitement')">Discover the treatment</a>
-    </div>
-</section>
-<section id="traitement">
-<h2>Natural Hepatometer Treatment</h2>
-<img src="images/image2.jpg" alt="Natural Hepatometer Treatment" class="animate__animated animate__fadeIn">
-
-<p>If you test positive for the hepatitis B virus for more than 6 months, this indicates that you have a chronic infection.</p>
-
-<div class="highlight-box animate__animated animate__fadeInLeft">
-<p><strong>We offer highly effective natural treatments that can permanently eliminate the virus, unlike hospital treatments.</strong></p>
-</div>
-
-<p>At the hospital, doctors prescribe antivirals such as:</p>
-<ul>
-<li>Tenofovir</li>
-<li>Entecavir</li>
-</ul>
-<p>These medications do not cure hepatitis  B, they only slow the multiplication of the virus.</p>
-
-<h3>Why choose Hepatometer?</h3>
-<ul>
-<li>100% natural formula based on medicinal plants</li>
-<li>Gradually eliminates the hepatitis B virus</li>
-<li>Restores liver health</li>
-<li>Strengthens the immune system</li>
-<li>No harmful side effects</li>
-<li>Results proven by testimonials</li>
-</ul>
-
-<div class="product-highlight animate__animated animate__pulse">
-<h3>Special Trial Offer</h3>
-<p>2 boxes of Hepatometer at a price of 50,000 FCFA per box</p>
-<p><small>Allows you to see its effectiveness through the gradual disappearance of symptoms</small></p>
-<a href="#contact" class="cta-button"  onclick="showSection('contact')">Order the trial offer</a>
-</div>
-
-<h3>Directions for use</h3>
-<p>Take 2 scoops morning and evening with a large glass of water, for at least 3 months for optimal results.</p>
-</section>
-  
-<section id="testimonials">
-<h2>Testimonies of Healing</h2>
-
-<div class="testimonial-slider">
-<div class="testimonial">
-<img src="images/temoignage1.jpg" alt="Rosine Djohoun">
-<h4>My name is Rosine Djohoun</h4>
-
-<p>Three years ago, I was diagnosed with hepatitis B. It was a shock. I wasn't expecting it at all: no symptoms, a full life... and yet, the virus was there.</p>
-
-<p>Fortunately, I was well supported: a supportive family, and above all, a discovery that changed my life: a natural product called Hepatometer 🌿.
-
-On the recommendation of a healthcare professional, I started taking Hepatometer in addition to my medical care.  It's a plant-based product that supports the liver and helps strengthen the body's natural defenses. I incorporated it into a healthy routine: a balanced diet, no alcohol, restful sleep, gentle exercise... and lots of positive thoughts. 😊
-
-Little by little, the tests improved. My liver was better, I felt fitter, lighter. And today, good news: I'm cured!</p>
-
-<p>🙌 "Nature has been a valuable ally on my path to recovery."</p>
-
-"When we were told about hepatitis B, we were afraid for ourselves... and for our unborn baby. But thanks to God, medical care, and the support of nature, everything turned out well."
-
- </div>
-
-<div class="testimonial">
-<img src="images/temoignage2.jpg" alt="Couple Yvette and Malik">
-<h4>Yvette</h4>
-<p>We are Yvette and Malik. Two years ago, while trying to conceive, we discovered that I was a chronic carrier of hepatitis B. It was a real shock, especially when we thought about pregnancy.</p>
-
-Fortunately, we discovered a natural, plant-based product recommended for strengthening liver health:
-
-<strong>🌿 Hepatometer</strong>
-
-<p>I incorporated Hepatometer into my routine, with my doctor's approval. This natural supplement helped me support my liver, improve my health checkups, and, above all, help me get through this period with greater peace of mind.
-
-During my pregnancy, I was closely monitored.  And at birth, our little girl received:
-
-The hepatitis B vaccine immediately (within 12 hours),
-
-An immunoglobulin injection to protect her.
-
-Today, I am cured, my viral load is undetectable, and our daughter is in perfect health. 💖</p>
-
-<p>We want to say to couples going through this ordeal:
-Don't lose hope, surround yourself with good professionals, get informed, and also explore serious natural solutions like Hepatomètre, always with medical advice.
-
-💬 "Today, we are a happy family. And it all started with a little fear... and a lot of hope."</p>
-
-<p><strong>"Hepatomètre has been a real natural support throughout this journey."  – Yvette</strong></p>
-
-</div>
-
-<div class="testimonial">
-<img src="images/temoignage3.jpg" alt="Koffi">
-<h4>Jean Koffi</h4>
-<p>My battle with hepatitis B lasted more than five long years. I had lost hope. After endless hospital treatments, expensive medications, and numerous side effects, the doctors kept telling me the same thing: 'Patience, keep going, we'll see...' But the results never came. My health remained unstable, and my tests showed no significant improvement. I lived in constant anxiety, going from one medical appointment to another without ever seeing an end to this nightmare.</p>
-
-<p>Then, one day, a friend told me about Hepatometer. I was skeptical at first, of course—after so many failures, it's hard to believe in a new solution.  But I decided to give it one last try, a bit like a last hope thrown to fate.
-
-And then the miracle began. In just three months of treatment with Hepatometer, my symptoms diminished, my energy returned, and most importantly, my lab tests returned to normal. I couldn't believe it. My doctor himself was surprised by the speed and effectiveness of the results. For the first time in years, I was able to breathe, live normally, and regain hope.
-
-Today, I'm in great shape. Hepatometer has changed my life. It's not just a treatment, it's a rebirth. I sincerely recommend this product to anyone who, like me, feels trapped by an illness that seems endless. There is always a light at the end of the tunnel. For me, that light was called Hepatometer.
-
-</div>
-
-  <div class="testimonial">
-<img src="images/temoignage4.jpg" alt="Amina Diallo">
-<h4>Amina Diallo</h4>
-<p>I still remember the day I was told I had hepatitis. It was as if the ground had shifted beneath my feet. I was barely 32 years old, with a whole life ahead of me, plans, dreams... and suddenly, everything stopped. For three long years, I underwent relentless hospital treatment. I took all the medications prescribed, including tenofovir antecavir, underwent all the tests, and consulted several specialists. Every time I had a blood test, I hoped for a miracle. But the results remained the same. The virus was still there, and with it, fatigue, anxiety, and fear of tomorrow.
-
- It was during this period of total discouragement that I saw a woman's story on Facebook about the Hepatometer. At first, I had doubts. Too many disappointments, too much pain. But something inside me pushed me to try, just one last time. And today, I bless the day I made that decision.</p>
-
-<p>In barely a month, I felt my body change. I had more energy, I slept better, I started to smile again. And then came the day I received my results: the virus had disappeared. My tests were normal. I read the results several times, tears welling up in my eyes. I couldn't believe it. For the first time in three years, I was free. Free from this illness, from this constant fear. I cried, but they were tears of joy.</p>
-
-<p>The Hepatometer gave me back more than my health.  He gave me back my life, my strength, my inner peace. To everyone going through what I went through, I implore you: don't lose hope. Sometimes, the solution exists, even if it doesn't come from where you expect it.</p>
-</div>
-</div>
-
-<div class="product-highlight animate__animated animate__pulse">
-<h3>Ready to begin your journey to healing?</h3>
-<p>Order Hepatometer today and regain optimal health.</p>
-<a href="#contact" class="cta-button" onclick="showSection('contact')">Order now</a>
-</div>
-</section>
-
-  <section id="avis">
-<h2>Customer Reviews</h2>
-<p>Find out what our customers say about Hepatometer</p>
-
-<div class="review-slider">
-<div class="review">
-<img src="images/avis1.jpg" alt="Customer 1">
-<div class="stars">★★★★★</div>
-<h4>Marc T.</h4>
-<p>"Impressive results after only 3 months of treatment. My tests have improved significantly."</p>
-<div class="date">03/15/2023</div>
-</div>
-
-<div class="review">
-<img src="images/avis2.jpg" alt="Customer 2">
-<div class="stars">★★★★★</div>
-<h4>Sophie  K.</h4>
-<p>"Effective natural product. The fatigue has disappeared and I have regained my energy. I'm continuing the treatment."</p>
-<div class="date">04/22/2023</div>
-</div>
-
-<div class="review">
-<img src="images/avis3.jpg" alt="Client 3">
-<div class="stars">★★★★☆</div>
-<h4>Paul F.</h4>
-<p>"Good improvement after 2 boxes. Very responsive customer service for usage advice."</p>
-<div class="date">05/05/2023</div>
-</div>
-
-<div class="review">
-<img src="images/avis4.jpg" alt="Client 4">
-<div class="stars">★★★★★</div>
-<h4>Fatou  D.</h4>
-<p>"My doctor was surprised by the improvement in my results. I highly recommend Hepatometer."</p>
-<div class="date">06/24/2024</div>
-</div>
-
-<div class="review">
-<img src="images/avis5.jpg" alt="Client 5">
-<div class="stars">★★★★★</div>
-<h4>Eric S.</h4>
-<p>"Finally, a natural treatment that works against hepatitis B. After 4 months, my virus is undetectable."</p>
-<div class="date">12/14/2023</div>
-</div>
-
-<div class="review">
-<img src="images/avis6.jpg" alt="Client 6">
-<div class="stars">★★★★☆</div>
- <h4>Aïcha B.</h4>
-<p>"Satisfied with the results. Symptoms gradually disappeared. Fast delivery."</p>
-<div class="date">02/12/2025</div>
-</div>
-
-<div class="review">
-<img src="images/avis7.jpg" alt="Client 7">
-<div class="stars">★★★★★</div>
-<h4>Thomas L.</h4>
-<p>"I've been using the Hepatometer for 5 months, and my latest tests show a significant improvement."</p>
-<div class="date">03/21/2025</div>
-</div>
-
-<div class="review">
-<img src="images/avis8.jpg" alt="Client 8">
-<div class="stars">★★★★★</div>
- <h4>Nadia K.</h4>
-<p>"This product has changed my life. After years of chronic hepatitis B, I finally feel cured."</p>
-<div class="date">08/10/2023</div>
-</div>
-
-<div class="review">
-<img src="images/avis9.jpg" alt="Client 9">
-<div class="stars">★★★★☆</div>
-<h4>David P.</h4>
-<p>"Good value for money. Positive effects on my overall health in addition to the action on hepatitis B."</p>
-<div class="date">19/11/2023</div>
-</div>
-
-<div class="review">
-<img src="images/avis10.jpg" alt="Client 10">
-<div  class="stars">★★★★★</div>
-<h4>Mariam C.</h4>
-<p>"I can confirm that Hepatometer is effective. After 3 months, I have no more symptoms and my tests are normal."</p>
-<div class="date">05/04/2025</div>
-</div>
-</div>
-
-<div class="product-highlight animate__animated animate__pulse">
-<h3>Join our many satisfied customers</h3>
-<p>Order Hepatometer and take the first step towards recovery</p>
-<a href="#contact" class="cta-button" onclick="showSection('contact')">I'm ordering</a>
-</div>
-  </section>
-  
-  
-  <!-- Rest of sections translated to English -->
-  
-<section id="contact">
-<h2>Contact Us</h2>
-<p>To:</p>
-<li>Order a Hepatometer</li>
-<li>Give your simple review</li>
-<li>Give your testimonial</li>
-<p>Or for any other questions, fill out the form below:</p>
-
-<form action="https://formsubmit.co/vitaplante01@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Your full name" required>
-<input type="email" name="email" placeholder="Your email" required>
-<input type="tel" name="phone" placeholder="Your phone number">
-<textarea name="message" placeholder="Your message or order" required></textarea>
-
-<!-- Redirect after submission -->
-<input type="hidden" name="_next"  value="https://contre-hepatique.github.io/merci.html">
-
-<!-- Disable Captcha -->
-<input type="hidden" name="_captcha" value="false">
-
-<button type="submit" class="cta-button">Submit</button>
-</form>
-
-<div style="text-align: center; margin-top: 2rem;">
-<h3>Or contact us directly by clicking on the WhatsApp icon in the bottom right corner</h3>
-
-</div>
-</section>
-
-<!-- WhatsApp Button -->
-<a class="whatsapp-float" href="https://wa.me/22956077109" target="_blank" title="Contact us on WhatsApp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<footer>
-<div class="social-icons">
-<a href="#"><i  class="fab fa-facebook"></i></a>
-       <a href="#"><i class="fab fa-instagram"></i></a>
-       <a href="#"><i class="fab fa-twitter"></i></a>
-     </div>
-     <p>&copy;  2023 Hepatometer - Natural Treatment of Hepatitis B</p>
-     <p>All rights reserved</p>
-   </footer>
-
-   <!-- jQuery -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <!-- Slick Carousel -->
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
-   <script>
-     function showSection(id) {
-       const sections = document.querySelectorAll('section');
-       sections.forEach(section => section.classList.remove('active'));
-       document.getElementById(id).classList.add('active');
-      
-       // Scroll to the top of the section
-       window.scrollTo({
-         top: document.getElementById(id).offsetTop - 100,
-         behavior: 'smooth'
-       });
-     }
-    
-     // Initialization of carousels
-     $(document).ready(function(){
-       $('.testimonial-slider').slick({
-         dots:false,
-         infinite: true,
-         speed: 300,
-         slidesToShow: 1,
-         adaptiveHeight: true,
-         autoplay: true,
-         autoplaySpeed: 5000,
-         arrows:false
-       });
-          // Initialization of the hero carousel
-         $('.hero-slider').slick({
-             dots:false,
-             infinite: true,
-             speed: 500,
-             fade: true,
-             cssEase: 'linear',
-             autoplay: true,
-             autoplaySpeed: 3000,
-             arrows: false,
-             pauseOnHover: false
-         });
-       $('.image-slider').slick({
-     autoplay: true,
-     autoplaySpeed: 3000,
-     dots:  false,
-     arrows: false,
-     fade: true,
-     pauseOnHover: false
- });
-      
-       $('.review-slider').slick({
-         dots:false,
-         infinite: true,
-         speed: 300,
-         slidesToShow: 3,
-         slidesToScroll: 1,
-         autoplay: true,
-         autoplaySpeed: 4000,
-         responsive: [
-           {
-             breakpoint: 768,
-             settings: {
-               slidesToShow: 2,
-               slidesToScroll: 1
-             }
-           },
-           {
-             breakpoint: 480,
-             settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
-             }
-           }
-         ]
-       });
-     });
-   </script>
- </body>
-</html>
+    nav button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      margin: 0.3rem;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
