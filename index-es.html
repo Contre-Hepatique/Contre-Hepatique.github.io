@@ -1,37 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hepatómetro - Tratamiento Natural de la Hepatitis B</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- Slick Carousel -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <style>
-    /* Mismo CSS que la versión original */
-  </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hepatometo - Tratamiento natural de la hepatitis B</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Fuentes de Google -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Animate.css -->
+<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<!-- Carrusel Slick -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<style>
+:root {
+--color primario: #007B5E;
+--color secundario: #25D366;
+--color de acento: #FF6B6B;
+--color claro: #f8f9fa;
+--color oscuro: #343a40;
+}
 
-  <header class="animate__animated animate__fadeIn">
-    <h1>Hepatómetro - Tratamiento Natural de la Hepatitis B</h1>
-    <p>Descubre la solución natural efectiva para eliminar definitivamente la hepatitis B</p>
-  </header>
+* {
+margen: 0;
+relleno: 0;
+tamaño de la caja: caja del borde;  }
 
-  <nav>
-    <button onclick="showSection('accueil')">Inicio</button>
-    <button onclick="showSection('symptomes')">Síntomas</button>
-    <button onclick="showSection('prevention')">Prevención</button>
-    <button onclick="showSection('traitement')">Tratamiento</button>
-    <button onclick="showSection('temoignages')">Testimonios</button>
-    <button onclick="showSection('avis')">Opiniones</button>
-    <button onclick="showSection('contact')">Contacto</button>
-  </nav>
+cuerpo {
+font-family: 'Poppins', sans-serif;
+background-color: #fff;
+color: #333;
+line-height: 1.6;
+}
+
+encabezado {
+background: linear-gradient(135deg, var(--primary-color), #005f47);
+color: blanco;
+padding: 1.5rem 0;
+text-align: center;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+position: relative;
+overflow: hidden;
+}
+
+encabezado::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+ Fondo: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+Tamaño de fondo: cover;
+Opacidad: 0.1;
+}
+
+Encabezado h1 {
+Tamaño de fuente: 2.2rem;
+Margen inferior: 0.5rem;
+Posición: relativa;
+Animación: fadeInDown 1s ease;
+}
+
+Encabezado p {
+Tamaño de fuente: 1.1rem;
+Opacidad: 0.9;  Ancho máximo: 800 px;
+Margen: 0 automático;
+Posición: relativa;
+}
+
+Navegación {
+Pantalla: flexible;
+Contenido justificado: centrado;
+Envoltura flexible: envolvente;
+Color de fondo: var(--color claro);
+Relleno: 0.8rem;
+Sombra de caja: 0 2 px 10 px rgba(0, 0, 0, 0.1);
+Posición: fija;
+Superior: 0;
+Índice z: 1000;
+}
+
+Botón de navegación {
+Color de fondo: var(--color primario);
+Color: blanco;
+Borde: ninguno;
+Margen: 0.3rem;
+Relleno: 0.8rem 1.5rem;
+Cursor: puntero;
+Radio del borde: 30 px;
+Tamaño de fuente: 0.9rem;  Peso de fuente: 500;
+Transición: 0.3s de lentitud;
+Sombra de caja: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+Botón de navegación: pasar el cursor {
+Color de fondo: #005f47;
+Transformación: traducirY(-2px);
+Sombra de caja: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+Sección {
+Mostrar: ninguno;
+Relleno: 2.5rem 1.5rem;
+Ancho máximo: 1200px;
+Margen: 0 automático;
+}
 
   <section id="accueil" class="active">
      <!-- Carrousel Hero - 10 images -->
