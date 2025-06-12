@@ -397,9 +397,111 @@ nav button:hover {
         font-size: 25px;
         bottom: 20px;
         right: 20px;
-      .hero-slider {
-      margin: 2rem 0;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      .hero-slider img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-slider img:hover {
+      transform: scale(1.02);
+    }
+    
+    
+    
+    
+    @media (max-width: 768px) {
+      .hero-slider img {
+        height: 250px;
       }
+.image-slider {
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.symptoms-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .slide-image img {
+        height: 300px;
+    }
+}
+    
+ <script>
+  const lang = navigator.language || navigator.userLanguage;
+  if (lang.startsWith('en')) {
+    window.location.href = 'index-en.html';
+  } else if (lang.startsWith('ar')) {
+    window.location.href = 'index-ar.html';
+  } else if (lang.startsWith('sw')) {
+    window.location.href = 'index-sw.html';
+  }
+
+      
+</script>   
+  </style>
+</head>
+<body>
+
+  <header class="animate__animated animate__fadeIn">
+    <h1>Hepatomètre - Traitement Naturel de l'Hépatite B</h1>
+    <p>Découvrez la solution naturelle efficace pour éliminer définitivement l'hépatite B</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('accueil')">Accueil</button>
+    <button onclick="showSection('symptomes')">Symptômes</button>
+    <button onclick="showSection('prevention')">Prévention</button>
+    <button onclick="showSection('traitement')">Traitement</button>
+    <button onclick="showSection('temoignages')">Témoignages</button>
+    <button onclick="showSection('avis')">Avis Clients</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="accueil" class="active">
+     <!-- Carrousel Hero - 10 images -->
+    <div class="hero-slider">
+        <div><img src="images/image1.jpg" alt="Hepatomètre traitement naturel hépatite B"></div>
+        <div><img src="images/slide2.jpg" alt="Foie sain avec Hepatomètre"></div>
+        <div><img src="images/slide3.jpg" alt="Composition naturelle Hepatomètre"></div>
+        <div><img src="images/slide4.jpg" alt="Résultats Hepatomètre contre hépatite B"></div>
+        <div><img src="images/slide5.jpg" alt="Témoignages Hepatomètre"></div>
+        <div><img src="images/slide6.jpg" alt="Boîte Hepatomètre"></div>
+        <div><img src="images/slide7.jpg" alt="Plantes médicinales Hepatomètre"></div>
+        <div><img src="images/slide8.jpg" alt="Guérison hépatite B naturelle"></div>
+        <div><img src="images/slide9.jpg" alt="Avantages Hepatomètre"></div>
+        <div><img src="images/slide10.jpg" alt="Commander Hepatomètre"></div>
+    </div>
+    
+    <h2>Qu'est-ce que l'hépatite B ?</h2>
+    <p><strong>L'hépatite B est l'infection hépatique grave la plus répandue au monde. Elle est causée par le virus de l'hépatite B qui attaque et endommage le foie. Chaque année, jusqu'à un million de personnes meurent de l'hépatite B, bien qu'elle soit évitable et traitable.</strong></p>
+    
+    <div class="highlight-box animate__animated animate__fadeInLeft">
+      <p>L'hépatite B se transmet par contact direct avec du sang ou certains liquides corporels infectés. Le virus se transmet le plus souvent d'une femme enceinte infectée à son bébé lors de l'accouchement, en raison des échanges sanguins entre la mère et son bébé.</p>
+    </div>
+    
+    <p>L'hépatite B est une « épidémie silencieuse » car la plupart des personnes infectées récentes ou chroniques ne présentent aucun symptôme. Elles peuvent donc transmettre le virus à d'autres personnes sans le savoir et perpétuer la propagation silencieuse de l'hépatite B.</p>
+    
+    <p><strong>La bonne nouvelle, c'est que l'hépatite B est évitable et traitable.</strong> Un simple test sanguin permet de diagnostiquer une infection par le virus de l'hépatite B. <strong>Le dépistage est le seul moyen de savoir avec certitude si vous êtes infecté.</strong></p>
+    
+    <div class="product-highlight animate__animated animate__pulse animate__delay-1s">
+      <h3>Hepatomètre</h3>
+      <p>Notre traitement naturel révolutionnaire pour éliminer définitivement l'hépatite B</p>
+      <div class="price">50.000 FCFA / boîte</div>
+      <a href="#contact" class="cta-button" onclick="showSection('contact')">Commander maintenant</a>
+    </div>
