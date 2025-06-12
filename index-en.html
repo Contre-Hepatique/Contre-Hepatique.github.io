@@ -379,5 +379,127 @@ Today, I'm in great shape. Hepatometer has changed my life. It's not just a trea
   
   <!-- Rest of sections translated to English -->
   
-</body>
+<section id="contact">
+<h2>Contact Us</h2>
+<p>To:</p>
+<li>Order a Hepatometer</li>
+<li>Give your simple review</li>
+<li>Give your testimonial</li>
+<p>Or for any other questions, fill out the form below:</p>
+
+<form action="https://formsubmit.co/vitaplante01@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your full name" required>
+<input type="email" name="email" placeholder="Your email" required>
+<input type="tel" name="phone" placeholder="Your phone number">
+<textarea name="message" placeholder="Your message or order" required></textarea>
+
+<!-- Redirect after submission -->
+<input type="hidden" name="_next"  value="https://contre-hepatique.github.io/merci.html">
+
+<!-- Disable Captcha -->
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit" class="cta-button">Submit</button>
+</form>
+
+<div style="text-align: center; margin-top: 2rem;">
+<h3>Or contact us directly by clicking on the WhatsApp icon in the bottom right corner</h3>
+
+</div>
+</section>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp-float" href="https://wa.me/22956077109" target="_blank" title="Contact us on WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+<div class="social-icons">
+<a href="#"><i  class="fab fa-facebook"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+     </div>
+     <p>&copy;  2023 Hepatometer - Natural Treatment of Hepatitis B</p>
+     <p>All rights reserved</p>
+   </footer>
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Slick Carousel -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+   <script>
+     function showSection(id) {
+       const sections = document.querySelectorAll('section');
+       sections.forEach(section => section.classList.remove('active'));
+       document.getElementById(id).classList.add('active');
+      
+       // Scroll to the top of the section
+       window.scrollTo({
+         top: document.getElementById(id).offsetTop - 100,
+         behavior: 'smooth'
+       });
+     }
+    
+     // Initialization of carousels
+     $(document).ready(function(){
+       $('.testimonial-slider').slick({
+         dots:false,
+         infinite: true,
+         speed: 300,
+         slidesToShow: 1,
+         adaptiveHeight: true,
+         autoplay: true,
+         autoplaySpeed: 5000,
+         arrows:false
+       });
+          // Initialization of the hero carousel
+         $('.hero-slider').slick({
+             dots:false,
+             infinite: true,
+             speed: 500,
+             fade: true,
+             cssEase: 'linear',
+             autoplay: true,
+             autoplaySpeed: 3000,
+             arrows: false,
+             pauseOnHover: false
+         });
+       $('.image-slider').slick({
+     autoplay: true,
+     autoplaySpeed: 3000,
+     dots:  false,
+     arrows: false,
+     fade: true,
+     pauseOnHover: false
+ });
+      
+       $('.review-slider').slick({
+         dots:false,
+         infinite: true,
+         speed: 300,
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         autoplay: true,
+         autoplaySpeed: 4000,
+         responsive: [
+           {
+             breakpoint: 768,
+             settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1
+             }
+           },
+           {
+             breakpoint: 480,
+             settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+             }
+           }
+         ]
+       });
+     });
+   </script>
+ </body>
 </html>
