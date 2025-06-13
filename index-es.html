@@ -229,6 +229,148 @@ estilo de fuente: cursiva;
 color: #555;
 alineación del texto: centrado;
  }
+ .review .stars {
+color: #FFD700;
+text-align: center;
+margin-bottom: 0.5rem;
+font-size: 1.2rem;
+}
+
+.review .date {
+font-size: 0.8rem;
+color: #777;
+text-align: center;
+margin-top: 0.5rem;
+}
+
+form {
+max-width: 600px;
+margin: 0 auto;
+background-color: white;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+width: 100%;
+padding: 0.8rem;  margen inferior: 1rem;
+borde: 1px sólido #ddd;
+radio del borde: 5px;
+familia de fuentes: 'Poppins', sans-serif;
+transición: 0.3s de celeridad;
+}
+
+entrada:enfoque, área de texto:enfoque {
+contorno: ninguno;
+color del borde: var(--color primario);
+sombra del cuadro: 0 0 0 3px rgba(0, 123, 94, 0.2);
+}
+
+área de texto {
+altura mínima: 150px;
+tamaño: vertical;
+}
+
+botón[tipo="enviar"] {
+color de fondo: var(--color primario);
+color: blanco;
+borde: ninguno;
+relleno: 0.8rem 1.5rem;
+radio del borde: 30px;
+cursor: puntero;  Peso de fuente: 500;
+Transición: 0.3 s (facilidad);
+Visualización: bloque;
+Margen: 0 automático;
+Tamaño de fuente: 1 REM;
+}
+
+botón[type="submit"]:hover {
+Color de fondo: #005f47;
+Transformación: translateY(-2px);
+Sombra de caja: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.resaltado de producto {
+Fondo: degradado lineal(135 grados, rgba(0, 123, 94, 0.1), rgba(37, 211, 102, 0.1));
+Relleno: 2 REM;
+Radio del borde: 10 px;
+Margen: 2 REM 0;
+Alineación del texto: centrar;  borde: 1px discontinuo var(--color-primario);
+}
+
+.resaltado-producto h3 {
+color: var(--color-primario);
+tamaño-fuente: 1.8rem;
+margen-inferior: 1rem;
+}
+
+.resaltado-producto .precio {
+tamaño-fuente: 1.5rem;
+color: var(--color-acento);
+peso-fuente: 700;
+margen: 1rem 0;
+}
+
+.cta-botón {
+color-fondo: var(--color-acento);
+color: blanco;
+relleno: 1rem 2rem;
+radio-borde: 30px;
+decoración-texto: ninguna;
+peso-fuente: 600;
+visualización: bloque-en-línea;
+margen-superior: 1rem;
+transición: 0.3s de celeridad;  Sombra de caja: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.cta-button:hover {
+Color de fondo: #ff5252;
+Transform: translateY(-3px);
+Sombra de caja: 0 6px 12px rgba(255, 107, 107, 0.4);
+}
+
+Football {
+Color de fondo: var(--dark-color);
+Color: blanco;
+Alineación del texto: centrar;
+Relleno: 2rem;
+Margen superior: 3rem;
+}
+
+.social-icons {
+Margen: 1rem 0;
+}
+
+.social-icons a {
+Color: blanco;
+Margen: 0 0.5rem;
+Tamaño de fuente: 1.5rem;  transición: 0.3s de facilidad;
+}
+
+.social-icons a:hover {
+color: var(--secondary-color);
+transform: translateY(-3px);
+}
+
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+}
+70% {
+box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+}
+}
+
+/* Estilos adaptables */
+@media (max-width: 768px) {
+header h1 {
+font-size: 1.8rem; 
+}
+
  
   <section id="accueil" class="active">
      <!-- Carrousel Hero - 10 images -->
