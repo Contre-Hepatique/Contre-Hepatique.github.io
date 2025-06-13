@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Epatometro - Trattamento Naturale per l'Epatite B</title>
+  <title>Epatometro - Trattamento naturale per l'epatite B</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
@@ -13,24 +13,474 @@
   <!-- Slick Carousel -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <style>
-    /* Stesso CSS della versione originale */
+    :root {
+      --primary-color: #007B5E;
+      --secondary-color: #25D366;
+      --accent-color: #FF6B6B;
+      --light-color: #f8f9fa;
+      --dark-color: #343a40;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #005f47);
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+      background-size: cover;
+      opacity: 0.1;
+    }
+    
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      animation: fadeInDown 1s ease;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: var(--light-color);
+      padding: 0.8rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    nav button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      margin: 0.3rem;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav button:hover {
+      background-color: #005f47;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    section {
+      display: none;
+      padding: 2.5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .active {
+      display: block;
+      animation: fadeIn 0.8s ease;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--secondary-color);
+    }
+    
+    h3 {
+      color: var(--primary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.5rem;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+    }
+    
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    strong {
+      color: var(--primary-color);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    img:hover {
+      transform: scale(1.02);
+    }
+    
+    .highlight-box {
+      background-color: rgba(0, 123, 94, 0.1);
+      border-left: 4px solid var(--primary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--secondary-color);
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-float:hover {
+      background-color: #1ebd58;
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    }
+    
+    .testimonial-slider, .review-slider {
+      margin: 2rem 0;
+    }
+    
+    .testimonial, .review {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 0 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .testimonial img, .review img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      display: block;
+      border: 3px solid var(--primary-color);
+    }
+    
+    .testimonial h4, .review h4 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .testimonial p, .review p {
+      font-style: italic;
+      color: #555;
+      text-align: center;
+    }
+    
+    .review .stars {
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .review .date {
+      font-size: 0.8rem;
+      color: #777;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(0, 123, 94, 0.2);
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #005f47;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-highlight {
+      background: linear-gradient(135deg, rgba(0, 123, 94, 0.1), rgba(37, 211, 102, 0.1));
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      text-align: center;
+      border: 1px dashed var(--primary-color);
+    }
+    
+    .product-highlight h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .product-highlight .price {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+    
+    .cta-button {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+    }
+    
+    .cta-button:hover {
+      background-color: #ff5252;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+    }
+    
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .social-icons {
+      margin: 1rem 0;
+    }
+    
+    .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      nav button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+      }
+      
+      section {
+        padding: 1.5rem 1rem;
+      }
+      
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+      .hero-slider {
+      margin: 2rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero-slider img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-slider img:hover {
+      transform: scale(1.02);
+    }
+    
+    
+    
+    
+    @media (max-width: 768px) {
+      .hero-slider img {
+        height: 250px;
+      }
+.image-slider {
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.symptoms-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .slide-image img {
+        height: 300px;
+    }
+}
+    
+ <script>
+  const lang = navigator.language || navigator.userLanguage;
+  if (lang.startsWith('en')) {
+    window.location.href = 'index-en.html';
+  } else if (lang.startsWith('ar')) {
+    window.location.href = 'index-ar.html';
+  } else if (lang.startsWith('sw')) {
+    window.location.href = 'index-sw.html';
+  }
+
+      
+</script>   
   </style>
 </head>
 <body>
 
   <header class="animate__animated animate__fadeIn">
-    <h1>Epatometro - Trattamento Naturale per l'Epatite B</h1>
+    <h1>Epatometro - Trattamento naturale per l'epatite </h1>
     <p>Scopri la soluzione naturale efficace per eliminare definitivamente l'epatite B</p>
   </header>
 
   <nav>
-    <button onclick="showSection('accueil')">Home</button>
-    <button onclick="showSection('symptomes')">Sintomi</button>
-    <button onclick="showSection('prevention')">Prevenzione</button>
-    <button onclick="showSection('traitement')">Trattamento</button>
-    <button onclick="showSection('temoignages')">Testimonianze</button>
-    <button onclick="showSection('avis')">Recensioni</button>
-    <button onclick="showSection('contact')">Contatto</button>
+    <button onclick="showSection('accueil')">Accueil</button>
+    <button onclick="showSection('symptomes')">Symptômes</button>
+    <button onclick="showSection('prevention')">Prévention</button>
+    <button onclick="showSection('traitement')">Traitement</button>
+    <button onclick="showSection('temoignages')">Témoignages</button>
+    <button onclick="showSection('avis')">Avis Clients</button>
+    <button onclick="showSection('contact')">Contact</button>
   </nav>
 
   <section id="accueil" class="active">
