@@ -370,24 +370,114 @@ box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
 header h1 {
 font-size: 1.8rem; 
 }
+Botón de navegación {
+Relleno: 0.6rem 1rem;
+Tamaño de fuente: 0.8rem;
+}
 
+Sección {
+Relleno: 1.5rem 1rem;
+}
+
+.Whatsapp-float {
+Ancho: 50px;
+Alto: 50px;
+Tamaño de fuente: 25px;
+Inferior: 20px;
+Derecho: 20px;
+.Hero-Slider {
+Margen: 2rem 0;
+Radio del borde: 10px;
+Desbordamiento: Oculto;
+Sombra de caja: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Hero-Slider img {
+Ancho: 100%;
+Alto: 400px;
+Ajuste de objeto: Cubierta;
+Transición: Transformación 0.5s Facilidad;  }
+
+.hero-slider img:hover {
+transform: scale(1.02);
+}
+
+@media (ancho máximo: 768px) {
+.hero-slider img {
+alto: 250px;
+}
+.image-slider {
+margen: 20px 0;
+ancho máximo: 800px;
+margen izquierdo: automático;
+margen derecho: automático;
+}
+
+.slide-image img {
+ancho: 100%;
+alto: 400px;
+ajuste de objeto: cubierta;
+radio del borde: 8px;
+sombra de caja: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.síntomas-contenido {
+relleno: 20px;
+ancho máximo: 800px;  margen: 0 automático;
+}
+
+@media (ancho máximo: 768 px) {
+.imagen-diapositiva img {
+alto: 300 px;
+}
+}
+
+<script>
+const lang = navigator.language || navigator.userLanguage;
+if (lang.startsWith('en')) {
+window.location.href = 'index-en.html';
+} else if (lang.startsWith('ar')) {
+window.location.href = 'index-ar.html';
+} else if (lang.startsWith('sw')) {
+window.location.href = 'index-sw.html';  }
+
+      
+ </script>   
+   </estilo>
+ </cabeza>
+ <cuerpo>
+
+   <header class="animate__animated animate__fadeIn">
+     <h1>Hepatomètre - Traitement Naturel de l'Hépatite B</h1>
+     <p>Descubra la solución natural eficaz para eliminar definitivamente la hepatitis B</p>
+   </encabezado>
+
+   <nav>
+     <button onclick="showSection('accueil')">Inicio</button>
+     <button onclick="showSection('symptomes')">Síntomas</button>
+     <button onclick="showSection('prevention')">Prevención</button>
+     <button onclick="showSection('traitement')">Traitement</button>
+     <botón  onclick="showSection('temoignages')">Témoignages</button>
+     <button onclick="showSection('avis')">Clientes Avis</button>
+     <button onclick="showSection('contact')">Contacto</button>
+   </nav>
+
+   <sección id="accueil" class="activo">
+      <!-- Carrusel Hero - 10 imágenes -->
+     <div class="hero-slider">
+         <div><img src="images/image1.jpg" alt="Tratamiento hepatómico natural de la hepatitis B"></div>
+         <div><img src="images/slide2.jpg" alt="Foie sain avec Hepatomètre"></div>
+         <div><img src="images/slide3.jpg" alt="Composición natural hepatomètre"></div>
+         <div><img  src="images/slide4.jpg" alt="Resultados del hepatomètre contre hépatite B"></div>
+         <div><img src="images/slide5.jpg" alt="Témoignages Hepatomètre"></div>
+         <div><img src="images/slide6.jpg" alt="Boîte Hepatomètre"></div>
+         <div><img src="images/slide7.jpg" alt="Plantas medicinales hepatomètre"></div>
+         <div><img src="images/slide8.jpg" alt="Guérison hépatite B natural"></div>
+         <div><img src="images/slide9.jpg" alt="Ventajas del hepatomètre"></div>
+         <div><img src="images/slide10.jpg"  alt="Comandante Hepatomètre"></div>
+     </div>
  
-  <section id="accueil" class="active">
-     <!-- Carrousel Hero - 10 images -->
-    <div class="hero-slider">
-        <div><img src="images/image1.jpg" alt="Hepatómetro tratamiento natural hepatitis B"></div>
-        <div><img src="images/slide2.jpg" alt="Hígado sano con Hepatómetro"></div>
-        <div><img src="images/slide3.jpg" alt="Composición natural Hepatómetro"></div>
-        <div><img src="images/slide4.jpg" alt="Resultados Hepatómetro contra hepatitis B"></div>
-        <div><img src="images/slide5.jpg" alt="Testimonios Hepatómetro"></div>
-        <div><img src="images/slide6.jpg" alt="Caja Hepatómetro"></div>
-        <div><img src="images/slide7.jpg" alt="Plantas medicinales Hepatómetro"></div>
-        <div><img src="images/slide8.jpg" alt="Curación hepatitis B natural"></div>
-        <div><img src="images/slide9.jpg" alt="Ventajas Hepatómetro"></div>
-        <div><img src="images/slide10.jpg" alt="Comprar Hepatómetro"></div>
-    </div>
-    
-    <h2>¿Qué es la hepatitis B?</h2>
+ <h2>¿Qué es la hepatitis B?</h2>
     <p><strong>La hepatitis B es la infección hepática grave más extendida en el mundo. Está causada por el virus de la hepatitis B que ataca y daña el hígado. Cada año, hasta un millón de personas mueren a causa de la hepatitis B, aunque es prevenible y tratable.</strong></p>
     
     <div class="highlight-box animate__animated animate__fadeInLeft">
